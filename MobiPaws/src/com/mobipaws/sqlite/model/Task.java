@@ -2,7 +2,7 @@ package com.mobipaws.sqlite.model;
 
 public class Task {
 	
-	int id;
+	long id;
 	String petSitterFirstName;
 	String petSitterLastName;
 	String petSitterVisitDate;
@@ -10,7 +10,10 @@ public class Task {
 	String petSitterNotes;
 	
 	//constructors
-	public Task(int id, String petSitterFirstName, String petSitterLastName, String petSitterVisitDate,
+	public Task(){
+		
+	}
+	public Task(long id, String petSitterFirstName, String petSitterLastName, String petSitterVisitDate,
 			String petSitterVisitTime, String petSitterNotes){
 		
 		this.id = id;
@@ -23,7 +26,7 @@ public class Task {
 	}
 	
 	//set methods
-	public void setId(int id){
+	public void setId(long id){
 		this.id = id;
 	}
 	public void setPetSitterFirstName(String petSitterFirstName){

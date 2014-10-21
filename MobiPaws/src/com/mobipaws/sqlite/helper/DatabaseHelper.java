@@ -16,36 +16,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	private static final String DATABASE_NAME = "mobiPawsDb";
 	
 	//Database Tables
-	private static final String TABLE_tasks = "tasks";
-	private static final String TABLE_pet = "pet";
-	private static final String TABLE_petTasks = "petTasks";
+	public static final String TABLE_tasks = "tasks";
+	public static final String TABLE_pet = "pet";
+	public static final String TABLE_petTasks = "petTasks";
 	
 	//Common Column Names
-	private static final String COLUMN_ID = "id";
+	public static final String COLUMN_ID = "id";
 	
 	//Pet Table Columns
-	private static final String COLUMN_petName ="petName";
-	private static final String COLUMN_petType ="petType";
-	private static final String COLUMN_petGender ="petGender";
-	private static final String COLUMN_ownerFirstName ="ownerFirstName";
-	private static final String COLUMN_ownerLastName ="ownerLastName";
-	private static final String COLUMN_petAddress ="petAddress";
-	private static final String COLUMN_ownerPhone ="ownerPhone";
-	private static final String COLUMN_serviceType ="serviceType";
-	private static final String COLUMN_serviceStartDate ="serviceStartDate";
-	private static final String COLUMN_serviceEndDate ="serviceEndDate";
-	private static final String COLUMN_comments ="comments";
+	public static final String COLUMN_petName ="petName";
+	public static final String COLUMN_petType ="petType";
+	public static final String COLUMN_petGender ="petGender";
+	public static final String COLUMN_ownerFirstName ="ownerFirstName";
+	public static final String COLUMN_ownerLastName ="ownerLastName";
+	public static final String COLUMN_petAddress ="petAddress";
+	public static final String COLUMN_ownerPhone ="ownerPhone";
+	public static final String COLUMN_serviceType ="serviceType";
+	public static final String COLUMN_serviceStartDate ="serviceStartDate";
+	public static final String COLUMN_serviceEndDate ="serviceEndDate";
+	public static final String COLUMN_comments ="comments";
 	
 	//Tasks Table Columns
-	private static final String COLUMN_petSitterFirstName ="petSitterFirstName";
-	private static final String COLUMN_petSitterLastName ="petSitterLastName";
-	private static final String COLUMN_petSitterVisitDate ="petSitterVisitDate";
-	private static final String COLUMN_petSitterVisitTime ="petSitterVisitTime";
-	private static final String COLUMN_petSitterNotes = "petSitterNotes";
+	public static final String COLUMN_petSitterFirstName ="petSitterFirstName";
+	public static final String COLUMN_petSitterLastName ="petSitterLastName";
+	public static final String COLUMN_petSitterVisitDate ="petSitterVisitDate";
+	public static final String COLUMN_petSitterVisitTime ="petSitterVisitTime";
+	public static final String COLUMN_petSitterNotes = "petSitterNotes";
 	
 	//PetTasks Table Columns
-	private static final String COLUMN_tasks_id ="tasks_id";
-	private static final String COLUMN_pet_id ="pet_id";
+	public static final String COLUMN_tasks_id = "tasks_id";
+	public static final String COLUMN_pet_id = "pet_id";
 	
 	//Table Create Statements
 	

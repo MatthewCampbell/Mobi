@@ -2,6 +2,7 @@ package com.mobipaws.sqlite;
 
 import com.mobipaws.sqlite.helper.MobiPawsDataSource;
 import com.mobipaws.sqlite.model.Pet;
+import com.mobipaws.sqlite.model.Task;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 		
 		datasource = new MobiPawsDataSource(this);
+		datasource.open();
+		createData();
 	}
 
 	@Override
@@ -65,7 +68,39 @@ public class MainActivity extends ActionBarActivity {
 		pet.setServiceEnd("30-10-14");
 		pet.setComments("Feed him only Pedigree dog food");
 		pet = datasource.createPet(pet);
-		Log.i(LOG, "Pet has be added with the ID "+ pet.getId());      
+		Log.i(LOG, "Pet has be added with the ID "+ pet.getId()); 
+		
+		Task task = new Task();
+		
+		pet = new Pet();
+		pet.setPetName("Goldie");
+		pet.setPetType("Goldfish");
+		pet.setPetGender("Male");
+		pet.setOwnerFirstName("John");
+		pet.setOwnerLastName("Doe");
+		pet.setPetAddress("Crown Point");
+		pet.setOwnerPhone("333-1233");
+		pet.setServiceType("Pet Sitting");
+		pet.setServiceStart("22-10-14");
+		pet.setServiceEnd("30-10-14");
+		pet.setComments("Please ensure that he is fed on time");
+		pet = datasource.createPet(pet);
+		Log.i(LOG, "Pet has be added with the ID "+ pet.getId()); 
+		
+		pet = new Pet();
+		pet.setPetName("Puppy");
+		pet.setPetType("Dog");
+		pet.setPetGender("Female");
+		pet.setOwnerFirstName("Joe");
+		pet.setOwnerLastName("Black");
+		pet.setPetAddress("Calder Hall");
+		pet.setOwnerPhone("222-1233");
+		pet.setServiceType("Pet Sitting");
+		pet.setServiceStart("22-10-14");
+		pet.setServiceEnd("30-10-14");
+		pet.setComments("Please ensure that she is fed on time");
+		pet = datasource.createPet(pet);
+		Log.i(LOG, "Pet has be added with the ID "+ pet.getId()); 
 		
 		
 	}

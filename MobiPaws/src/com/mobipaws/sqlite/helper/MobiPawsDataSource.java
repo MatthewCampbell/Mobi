@@ -1,6 +1,8 @@
 package com.mobipaws.sqlite.helper;
 import com.mobipaws.sqlite.helper.DatabaseHelper;
 import com.mobipaws.sqlite.model.Pet;
+import com.mobipaws.sqlite.model.Task;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -42,6 +44,23 @@ public class MobiPawsDataSource {
 		long insertId = database.insert(DatabaseHelper.TABLE_pet, null, values);
 		pet.setId(insertId);
 		return pet;
+	}
+	public Task createTask(Task task){
+		ContentValues values = new ContentValues();
+		values.put(DatabaseHelper.COLUMN_petSitterFirstName, task.getPetSitterFirstName());
+		values.put(DatabaseHelper.COLUMN_petSitterLastName, task.getPetSitterLastName());
+		values.put(DatabaseHelper.COLUMN_petSitterVisitDate, null);
+		values.put(DatabaseHelper.COLUMN_petSitterVisitTime, null);
+		values.put(DatabaseHelper.COLUMN_petSitterNotes, task.getPetSitterNotes());
+		long insertId = database.insert(DatabaseHelper.TABLE_tasks, null, values);
+		task.setId(insertId);
+		return task;
+		
+	}
+	public PetTask createPetTask(PetTask petTask){
+		ContentValues values = new ContentValues();
+		values.put(DatabaseHelper.COLUMN_pet_id, pet.setTd(insertId));
+		values.put(DatabaseHelper.COLUMN_tasks_id, task.setId(insertId));
 	}
 
 }

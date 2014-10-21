@@ -16,6 +16,9 @@ public class Pet {
 	String comments;
 	
 	//constructors
+	public Pet(){
+		
+	}
 	public Pet(long id, String petName, String petType, String petGender, String ownerFirstName, String ownerLastName,
 			String petAddress, String ownerPhone, String serviceType, String serviceStart, String serviceEnd, String comments){
 		 
